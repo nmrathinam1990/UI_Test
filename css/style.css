@@ -1,0 +1,216 @@
+html {
+  font-family: "Open Sans";
+  font-size: 16px;
+}
+
+.rt-image-upload {
+  width: 480px;
+}
+
+.rt-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rt-image-container:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+img {
+  display: none;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.rt-image-upload__controls {
+  position: relative;
+  border: 2px dotted rgba(0, 0, 0, 0.12);
+  border-radius: 1px;
+  margin-top: 20px;
+}
+
+.rt-image-upload__controls:hover {
+  border-color: blue;
+  background-color: rgba(0, 0, 255, 0.15);
+}
+
+.rt-image-upload__controls:hover .rt-image-input__label {
+  color: blue;
+}
+
+.rt-image-input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rt-image-input__label {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.56);
+}
+
+.rt-image-upload__controls.--has-image {
+  border: none;
+  padding: 0;
+  background-color: white;
+  margin-bottom: 32px;
+}
+
+.rt-image-upload__controls.--has-image .rt-image-input {
+  z-index: -1;
+}
+
+.rt-image-upload__controls.--has-image img {
+  display: block;
+}
+
+.rt-image-upload__controls.--has-image .rt-image-input__label {
+  display: none;
+  position: inline;
+  bottom: 0;
+  text-align: left;
+  padding: 12px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.rt-image-upload__controls.--has-image:hover .rt-image-upload__actions {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.rt-image-upload__controls.--has-image:hover .rt-image-upload__actions span {
+  display: block;
+}
+
+.rt-image-upload__controls.--has-image:hover .rt-image-input__label {
+  display: block;
+}
+
+.buttons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  display: block;
+  font-size: 13px;
+  border: 1 px solid white;
+  border-radius: 1px;
+  background-color: transparent;
+  color: white;
+  line-height: 26px;
+  width: 88px;
+  opacity: 0.7;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  opacity: 1;
+}
+
+button + button {
+  margin-top: 12px;
+}
+
+button.delete {
+  color: red;
+  border-color: red;
+}
+
+button.delete:hover {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+.small-state .rt-image-upload__controls {
+  border: none;
+  display: inline-block;
+  width: 100%;
+}
+.small-state .rt-image-upload__controls:hover {
+  background-color: unset;
+}
+.small-state .rt-image-upload__controls .rt-image-container {
+  border: 2px dotted rgba(0, 0, 0, 0.12);
+  width: 30%;
+}
+.small-state .rt-image-upload__controls .rt-image-container:hover {
+  background: rgba(0, 0, 255, 0.15);
+  border-color: blue;
+}
+.small-state .rt-image-upload__controls .rt-image-upload__actions {
+  width: 50%;
+  padding-left: 15px;
+}
+.small-state .rt-image-upload__controls .rt-image-upload__actions .rt-image-input__label {
+  top: 0;
+  bottom: unset;
+  position: relative;
+  color: gray;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  padding: 0;
+}
+.small-state .rt-image-upload__controls .rt-image-upload__actions .buttons {
+  display: block;
+  position: relative;
+  top: unset;
+  left: unset;
+  transform: unset;
+}
+.small-state .rt-image-upload__controls .rt-image-upload__actions .buttons button {
+  display: inline-block;
+  border: 1px solid transparent;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  width: 70px;
+}
+.small-state .rt-image-upload__controls .rt-image-upload__actions .buttons .attach {
+  color: blue;
+}
+.small-state .rt-image-upload__controls .rt-image-upload__actions .buttons .delete {
+  display: none;
+}
+.small-state .rt-image-upload__controls .rt-image-container,
+.small-state .rt-image-upload__controls .rt-image-upload__actions {
+  float: left;
+  height: 150px;
+}
+.small-state .rt-image-upload__controls.--has-image .delete {
+  display: inline-block !important;
+}
+.small-state .rt-image-upload__controls.--has-image .delete:hover {
+  background: unset;
+}
+.small-state .rt-image-upload__controls.--has-image:hover .rt-image-upload__actions {
+  background: unset;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

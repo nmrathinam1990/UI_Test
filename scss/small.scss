@@ -1,0 +1,72 @@
+.small-state {
+  .rt-image-upload__controls {
+    border: none;
+    display: inline-block;
+    width: 100%;
+    &:hover {
+      background-color: unset;
+    }
+    .rt-image-container {
+      border: 2px dotted rgba(0, 0, 0, 0.12);
+      width: 30%;
+      &:hover {
+        background: rgba(0, 0, 255, 0.15);
+        border-color: blue;
+      }
+    }
+    .rt-image-upload__actions {
+      width: 50%;
+      padding-left: 15px;
+      .rt-image-input__label {
+        top: 0;
+        bottom: unset;
+        position: relative;
+        color: gray;
+        display: block;
+        text-align: left;
+        font-size: 14px;
+        padding: 0;
+      }
+      .buttons {
+        display: block;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        button {
+          display: inline-block;
+          border: 1px solid transparent;
+          text-align: left;
+          padding: 0;
+          cursor: pointer;
+          width: 70px;
+        }
+        .attach {
+          color: blue;
+        }
+        .delete {
+          display: none;
+        }
+      }
+    }
+    .rt-image-container,
+    .rt-image-upload__actions {
+      float: left;
+      height: 150px;
+    }
+    &.--has-image {
+      .delete {
+        display: inline-block !important;
+        &:hover {
+          background: unset;
+        }
+      }
+      &:hover {
+        .rt-image-upload__actions {
+          background: unset;
+          position: relative;
+        }
+      }
+    }
+  }
+}
