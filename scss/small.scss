@@ -1,15 +1,33 @@
 @import "variables";
 
+@mixin positioned($position) {
+  position: $position;
+}
+
+@mixin bordered($border) {
+  border: $border;
+}
+
+@mixin buttonLabel($display, $textAlign, $padding) {
+  display: $display;
+  text-align: $textAlign;
+  padding: $padding;
+}
+
+@mixin displayed($display) {
+  display: $display;
+}
+
 .small-state {
   .rt-image-upload__controls {
-    border: $displayNone;
-    display: $displayInlineBlock;
+    @include bordered($displayNone);
+    @include displayed($displayInlineBlock);
     width: 100%;
     &:hover {
       background-color: $unset;
     }
     .rt-image-container {
-      border: 2px dotted rgba(0, 0, 0, 0.12);
+      @include bordered(2px dotted rgba(0, 0, 0, 0.12));
       width: 30%;
       &:hover {
         background: rgba(0, 0, 255, 0.15);
@@ -22,32 +40,27 @@
       .rt-image-input__label {
         top: 0;
         bottom: $unset;
-        position: $positionRel;
+        @include positioned($positionRel);
         color: $gray;
-        display: $displayBlock;
-        text-align: $textLeft;
+        @include buttonLabel($displayBlock, $textLeft, $zeroPadding);
         font-size: 14px;
-        padding: $zeroPadding;
       }
       .buttons {
-        display: $displayBlock;
-        position: $positionRel;
+        @include displayed($displayBlock);
+        @include positioned($positionRel);
         top: $unset;
         left: $unset;
         transform: $unset;
         button {
-          display: $displayInlineBlock;
-          border: 1px solid transparent;
-          text-align: $textLeft;
-          padding: $zeroPadding;
-          cursor: pointer;
+          @include bordered(1px solid transparent);
+          @include buttonLabel($displayInlineBlock, $textLeft, $zeroPadding);
           width: 70px;
         }
         .attach {
           color: $blue;
         }
         .delete {
-          display: $displayNone;
+          @include displayed($displayNone);
         }
       }
     }
@@ -58,13 +71,13 @@
     }
     &.--has-image {
       .rt-image-container {
-        border: $zeroBorder;
+        @include bordered($zeroBorder);
         &:hover {
-          border: $zeroBorder;
+          @include bordered($zeroBorder);
         }
       }
       .delete {
-        display: $displayInlineBlock !important;
+        @include displayed($displayInlineBlock !important);
         &:hover {
           background: $unset;
         }
@@ -72,7 +85,7 @@
       &:hover {
         .rt-image-upload__actions {
           background: $unset;
-          position: $positionRel;
+          @include positioned($positionRel);
         }
       }
     }

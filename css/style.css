@@ -173,8 +173,8 @@ button.delete:hover {
   color: gray;
   display: block;
   text-align: left;
-  font-size: 14px;
   padding: 0;
+  font-size: 14px;
 }
 .small-state .rt-image-upload__controls .rt-image-upload__actions .buttons {
   display: block;
@@ -184,11 +184,10 @@ button.delete:hover {
   transform: unset;
 }
 .small-state .rt-image-upload__controls .rt-image-upload__actions .buttons button {
-  display: inline-block;
   border: 1px solid transparent;
+  display: inline-block;
   text-align: left;
   padding: 0;
-  cursor: pointer;
   width: 70px;
 }
 .small-state .rt-image-upload__controls .rt-image-upload__actions .buttons .attach {
