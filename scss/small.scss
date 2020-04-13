@@ -1,17 +1,19 @@
+@import "variables";
+
 .small-state {
   .rt-image-upload__controls {
-    border: none;
-    display: inline-block;
+    border: $displayNone;
+    display: $displayInlineBlock;
     width: 100%;
     &:hover {
-      background-color: unset;
+      background-color: $unset;
     }
     .rt-image-container {
       border: 2px dotted rgba(0, 0, 0, 0.12);
       width: 30%;
       &:hover {
         background: rgba(0, 0, 255, 0.15);
-        border-color: blue;
+        border-color: $blue;
       }
     }
     .rt-image-upload__actions {
@@ -19,58 +21,58 @@
       padding-left: 15px;
       .rt-image-input__label {
         top: 0;
-        bottom: unset;
-        position: relative;
-        color: gray;
-        display: block;
-        text-align: left;
+        bottom: $unset;
+        position: $positionRel;
+        color: $gray;
+        display: $displayBlock;
+        text-align: $textLeft;
         font-size: 14px;
-        padding: 0;
+        padding: $zeroPadding;
       }
       .buttons {
-        display: block;
-        position: relative;
-        top: unset;
-        left: unset;
-        transform: unset;
+        display: $displayBlock;
+        position: $positionRel;
+        top: $unset;
+        left: $unset;
+        transform: $unset;
         button {
-          display: inline-block;
+          display: $displayInlineBlock;
           border: 1px solid transparent;
-          text-align: left;
-          padding: 0;
+          text-align: $textLeft;
+          padding: $zeroPadding;
           cursor: pointer;
           width: 70px;
         }
         .attach {
-          color: blue;
+          color: $blue;
         }
         .delete {
-          display: none;
+          display: $displayNone;
         }
       }
     }
     .rt-image-container,
     .rt-image-upload__actions {
-      float: left;
+      float: $floatLeft;
       height: 150px;
     }
     &.--has-image {
       .rt-image-container {
-        border: 0;
+        border: $zeroBorder;
         &:hover {
-          border: 0;
+          border: $zeroBorder;
         }
       }
       .delete {
-        display: inline-block !important;
+        display: $displayInlineBlock !important;
         &:hover {
-          background: unset;
+          background: $unset;
         }
       }
       &:hover {
         .rt-image-upload__actions {
-          background: unset;
-          position: relative;
+          background: $unset;
+          position: $positionRel;
         }
       }
     }
