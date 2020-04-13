@@ -55,6 +55,12 @@
       height: 150px;
     }
     &.--has-image {
+      .rt-image-container {
+        border: 0;
+        &:hover {
+          border: 0;
+        }
+      }
       .delete {
         display: inline-block !important;
         &:hover {

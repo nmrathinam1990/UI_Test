@@ -202,6 +202,12 @@ button.delete:hover {
   float: left;
   height: 150px;
 }
+.small-state .rt-image-upload__controls.--has-image .rt-image-container {
+  border: 0;
+}
+.small-state .rt-image-upload__controls.--has-image .rt-image-container:hover {
+  border: 0;
+}
 .small-state .rt-image-upload__controls.--has-image .delete {
   display: inline-block !important;
 }
